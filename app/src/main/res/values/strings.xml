@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mozio Test2</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Shop</string>
+    <string name="second_fragment_label">Details</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="pizza_image">pizza image</string>
+    <string name="details">Details</string>
+
+</resources>
