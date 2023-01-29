@@ -3,11 +3,9 @@ package moziotest2.adapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseAdapter<T : BaseAdapterObject>(diffCallback: BaseDiffCallback<T> = BaseDiffCallback()) :
+abstract class BaseAdapter<T : ShopAdapterObject>(diffCallback: BaseDiffCallback<T> = BaseDiffCallback()) :
     ListAdapter<T, BaseHolder>(diffCallback) {
-    override fun getItemViewType(position: Int): Int {
-        return getItem(position).type.value
-    }
+
 
     open fun onBindHolder(binding: ViewBinding, position: Int) {}
 

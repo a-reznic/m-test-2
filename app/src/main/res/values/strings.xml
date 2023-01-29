@@ -8,5 +8,15 @@
     <string name="previous">Previous</string>
     <string name="pizza_image">pizza image</string>
     <string name="details">Details</string>
+    <string name="reset">Reset</string>
+    <string name="flavor_full">Full %1$.2f$</string>
+    <string name="flavor_half">Half %1$.2f$</string>
+    <string name="you_select_full_pizza">You already selected full pizza</string>
+    <string name="back">Back</string>
+    <string name="exit">Exit</string>
+    <string name="line">-----------------------------------------</string>
+    <string name="order_details">Order Details</string>
+    <string name="details_total">Total: %1$.2f$</string>
+    <string name="details_selected_flavor">%1$s (%2$s) - %3$.2f$</string>
 
 </resources>

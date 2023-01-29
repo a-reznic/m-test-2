@@ -6,6 +6,7 @@ import moziotest2.network.API
 import moziotest2.network.RetrofitFactory
 import moziotest2.repository.ShopRepository
 import moziotest2.repository.ShopRepositoryImpl
+import moziotest2.service.FlavorService
 import moziotest2.ui.shop.ShopViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.annotation.KoinReflectAPI
@@ -19,7 +20,8 @@ object KoinModule {
     fun main(): Module = module {
         single { createHttpClient() }
         single<ShopRepository> { ShopRepositoryImpl(get()) }
-        viewModel { ShopViewModel(get()) }
+        single<FlavorService> { FlavorService(get()) }
+        viewModel { ShopViewModel(get(), get()) }
     }
 
     private fun createHttpClient(): API {
