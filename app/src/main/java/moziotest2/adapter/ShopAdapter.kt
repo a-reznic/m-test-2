@@ -2,9 +2,7 @@ package moziotest2.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.google.android.material.button.MaterialButton
 import mozio.test2.databinding.BaseShopItemBinding
-import moziotest2.domain.Flavor
 import moziotest2.domain.FlavorType.FULL
 import moziotest2.domain.FlavorType.HALF
 
@@ -33,13 +31,8 @@ class HeaderHolder(b: BaseShopItemBinding) :
                         if (flavor.selected) {
                             fullPriceBtn.icon = item.iconRes
                         }
-//                        initButton(fullPriceBtn, flavor) {
-//                            resetSelected(item, flavor)
                         fullPriceBtn.text = flavor.text
                         fullPriceBtn.setOnClickListener { item.onClickListener.invoke(flavor) }
-//                            resetAllButtonsIcon(listOf(fullPriceBtn, halfPriceBtn))
-//                            fullPriceBtn.icon = item.iconRes
-//                        }
                     }
                     HALF -> {
                         if (flavor.selected) {
@@ -52,26 +45,5 @@ class HeaderHolder(b: BaseShopItemBinding) :
                 }
             }
         }
-    }
-
-    private fun resetAllButtonsIcon(list: List<MaterialButton>) {
-        list.forEach { it.icon = null }
-    }
-
-    private fun resetSelected(item: ShopAdapterObject, flavor: Flavor) {
-        item.flavors.forEach {
-            it.selected = false
-        }
-        flavor.selected = true
-
-    }
-
-    private fun initButton(
-        btn: MaterialButton,
-        flavor: Flavor,
-        onClickListener: (Flavor) -> Unit,
-    ) {
-        btn.text = flavor.price.toString()
-        btn.setOnClickListener { onClickListener.invoke(flavor) }
     }
 }
